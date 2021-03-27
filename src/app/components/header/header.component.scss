@@ -1,0 +1,13 @@
+.header {
+  height: 60px;
+  padding: 0 20px;
+  background: #181818;
+  color: #FFE601;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .logout {
+    margin-left: auto;
+  }
+}

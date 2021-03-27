@@ -1,0 +1,7 @@
+<div class="header">
+  <h1 *ngIf="!authed else authedTemplate">Login Page</h1>
+  <ng-template #authedTemplate>
+    <h1>Home Page</h1>
+<!--    <button mat-button color="warn" class="logout">Logout</button>-->
+  </ng-template>
+</div>

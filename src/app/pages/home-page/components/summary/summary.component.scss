@@ -1,0 +1,40 @@
+.container {
+  width: 1200px;
+  margin: 40px auto;
+
+  .download {
+    width: 350px;
+    align-self: center;
+
+    .links {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  .summary {
+    margin-top: 15px;
+    display: flex;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+
+    .content {
+      padding: 102px 88px 107px 88px;
+      flex-grow: 1;
+      background: #fff;
+
+      .my-name {
+        margin-top: 19px;
+      }
+
+      .info-about-me {
+        margin-top: 24px;
+        color: #595959;
+      }
+
+      .section {
+        margin-top: 50px;
+      }
+    }
+  }
+}

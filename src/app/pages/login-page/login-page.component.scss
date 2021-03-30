@@ -1,0 +1,26 @@
+.container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+
+  .hint {
+    width: 35px;
+    margin-left: 20px;
+    background: url("../../../assets/svg-icons/arrow-left.svg") center left no-repeat;
+    background-size: 35px;
+    filter: invert(47%) sepia(22%) saturate(1846%) hue-rotate(317deg) brightness(87%) contrast(124%);
+    animation: pointer 1s linear 0s infinite alternate;
+  }
+}
+
+@keyframes pointer {
+  from {
+    width: 35px;
+    margin-left: 20px;
+  }
+
+  to {
+    width: 55px;
+    margin-left: 0;
+  }
+}

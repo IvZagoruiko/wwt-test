@@ -1,11 +1,15 @@
 import {createSelector} from '@ngrx/store';
 import {IRootState} from '../interfaces';
-import {Auth} from '../../enums';
+import {IAuth} from '../../interfaces';
 
-// ToDo : Denis answer 1
-const selectState = (state: IRootState): IRootState => state;
+const selectAuth = (state: IRootState): IAuth => state.auth;
 
-export const selectAuth = createSelector(
-  selectState,
-  (state: IRootState): Auth => state.auth
+export const selectAuthenticated = createSelector(
+  selectAuth,
+  (state: IAuth): boolean => state.authenticated
+);
+
+export const selectAuthError = createSelector(
+  selectAuth,
+  (state: IAuth): boolean => state.error
 );

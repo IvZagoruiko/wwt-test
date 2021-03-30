@@ -1,8 +1,8 @@
 import {IAuthData} from '../interfaces';
 
-export const Users: Array<IAuthData> = [
+export const USERS: Array<IAuthData> = [
   {
-    email: 'test@test.test',
+    email: 'test@test',
     password: 'test'
   }
 ];

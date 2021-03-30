@@ -4,10 +4,10 @@
   background: #181818;
   color: #FFE601;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  .logout {
-    margin-left: auto;
+  .balance-block {
+    width: 82px;
   }
 }

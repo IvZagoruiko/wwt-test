@@ -1,0 +1,16 @@
+.container {
+  margin: 45px 40px 0 40px;
+  color: #fff;
+
+  .list {
+    margin-left: 16px;
+
+    &-title {
+      margin-bottom: 8px;
+    }
+
+    li::marker {
+      color: #fb6d3a;
+    }
+  }
+}

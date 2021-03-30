@@ -1,0 +1,13 @@
+<aside class="side-bar">
+  <div class="photo" [ngStyle]="getBackground()"></div>
+  <div class="contacts">
+    <p class="font-22-bold contacts-title">Contacts</p>
+    <div *ngFor="let contact of data?.contacts" class="font-14">
+      <span class="contact-type">{{contact.label}}</span>
+      <a [href]="contact.ref"
+         [target]="getTarget(contact.ref)"
+         class="contact-link">{{contact.text}}</a>
+    </div>
+  </div>
+  <app-side-bar-list *ngFor="let list of data?.lists" [data]="list"></app-side-bar-list>
+</aside>

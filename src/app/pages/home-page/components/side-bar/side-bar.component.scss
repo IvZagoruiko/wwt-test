@@ -1,0 +1,33 @@
+.side-bar {
+  width: 370px;
+  padding: 40px 0;
+  background: #1e2939;
+
+  .photo {
+    height: 300px;
+    background: no-repeat center;
+    background-size: contain;
+    background-position-y: -2px;
+  }
+
+  .contacts {
+    margin: 51px 40px 0 40px;
+    color: #fff;
+
+    &-title {
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      &-type {
+        margin-right: 10px;
+      }
+
+      &-link {
+        color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
+      }
+    }
+  }
+}

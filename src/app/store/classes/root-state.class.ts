@@ -1,6 +1,9 @@
 import {IRootState} from '../interfaces';
-import {Auth} from '../../enums';
+import {IAuth} from '../../interfaces';
 
 export class RootState implements IRootState {
-  auth = Auth.logout;
+  auth: IAuth = {
+    authenticated: false,
+    error: false
+  };
 }

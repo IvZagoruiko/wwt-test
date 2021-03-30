@@ -5,9 +5,9 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {RootStoreModule} from './store/root-store.module';
 import {HttpClientModule} from '@angular/common/http';
-import {HeaderComponent} from './components/header/header.component';
+import {HeaderComponent} from './components';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-// import {MatButtonModule} from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // MatButtonModule,
+    MatButtonModule,
     AppRoutingModule,
     RootStoreModule
   ],

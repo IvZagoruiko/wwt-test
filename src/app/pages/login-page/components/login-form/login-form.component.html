@@ -1,0 +1,38 @@
+<h2 mat-dialog-title class="text-center">Sing in</h2>
+<form [formGroup]="form" (submit)="login()">
+  <mat-dialog-content class="content">
+    <div class="column">
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Email</mat-label>
+        <input type="email" [formControl]="email" matInput required>
+        <mat-error *ngIf="email.errors?.required">
+          Field is required.
+        </mat-error>
+        <mat-error *ngIf="email.errors?.email">
+          Email is not correct.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label>Password</mat-label>
+        <input type="password" [formControl]="password" matInput required>
+        <mat-error *ngIf="password.errors?.required">
+          Field is required.
+        </mat-error>
+        <mat-error *ngIf="password.errors?.minlength">
+          <p>Password min length must be {{password.errors?.minlength.requiredLength}}.</p>
+          <p>Current length is {{password.errors?.minlength.actualLength}}.</p>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <small *ngIf="error" class="error">Email or password is not correct.</small>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-stroked-button mat-dialog-close color="warn">Close</button>
+    <button mat-flat-button color="accent" type="submit" [disabled]="disableSubmitButton()">
+      <span *ngIf="!submitted else submittedTemplate">Sign in</span>
+      <ng-template #submittedTemplate>
+        <mat-spinner diameter="35" color="accent"></mat-spinner>
+      </ng-template>
+    </button>
+  </mat-dialog-actions>
+</form>

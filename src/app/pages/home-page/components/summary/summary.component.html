@@ -1,0 +1,38 @@
+<div class="container column">
+  <div class="download">
+    <p class="text-center">Download summary</p>
+    <div class="links">
+      <a href="assets/documents/Ivan%20Zahoruiko%20cv.docx.pdf"
+         target="_blank"
+         mat-flat-button>Download PDF</a>
+      <a href="assets/documents/Ivan%20Zahoruiko%20cv.docx"
+         target="_blank"
+         mat-flat-button>Download Word</a>
+    </div>
+  </div>
+  <div class="summary">
+    <app-side-bar [data]="data?.sideBar"></app-side-bar>
+    <div class="content">
+      <div>
+        <p class="font-14-bold">{{data?.position}}</p>
+        <p class="font-45-bold my-name">{{data?.name}}</p>
+        <p class="font-14 info-about-me">{{data?.aboutMe}}</p>
+      </div>
+      <div class="section">
+        <p class="font-22-bold">Work Experience</p>
+        <app-work *ngFor="let work of data?.experience"
+                  [data]="work"></app-work>
+      </div>
+      <div class="section">
+        <p class="font-22-bold">Education</p>
+        <app-institution *ngFor="let institution of data?.education"
+                         [data]="institution"></app-institution>
+      </div>
+      <div class="section">
+        <p class="font-22-bold">Courses</p>
+        <app-course *ngFor="let course of data?.courses"
+                    [data]="course"></app-course>
+      </div>
+    </div>
+  </div>
+</div>

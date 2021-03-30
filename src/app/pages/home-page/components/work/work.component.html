@@ -1,0 +1,9 @@
+<div class="container">
+  <p class="font-16-bold">
+    {{data?.position}} <span class="color-orange">{{data?.company}}</span>
+  </p>
+  <p class="font-12 period">{{data?.period}}</p>
+  <ul class="font-14 duties">
+    <li *ngFor="let duty of data?.duties">{{duty}}</li>
+  </ul>
+</div>

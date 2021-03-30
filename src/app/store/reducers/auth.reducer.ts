@@ -1,23 +1,33 @@
 import {createReducer, on} from '@ngrx/store';
 import {initialState} from '../root-store.state';
-import {logoutAction, resultLoginAction} from '../actions';
-import {Auth} from '../../enums';
+import {fillErrorsAction, fillLogoutAction, fillRejectLoginAction, fillResolveLoginAction} from '../actions';
 import {IAction} from '../interfaces';
+import {IAuth} from '../../interfaces';
 
-const resultLogin = (state: Auth, action: IAction): Auth => {
-  return action.payload;
+const fillResolveLogin = (state: IAuth): IAuth => {
+  return {...state, authenticated: true};
 };
 
-const logout = (state: Auth): Auth => {
-  return Auth.logout;
+const fillRejectLogin = (state: IAuth): IAuth => {
+  return {...state, error: true};
+};
+
+const fillLogout = (state: IAuth): IAuth => {
+  return {...state, authenticated: false};
+};
+
+const fillErrors = (state: IAuth): IAuth => {
+  return {...state, error: false};
 };
 
 const authReducerBuilder = createReducer(
   initialState.auth,
-  on(resultLoginAction, resultLogin),
-  on(logoutAction, logout)
+  on(fillResolveLoginAction, fillResolveLogin),
+  on(fillRejectLoginAction, fillRejectLogin),
+  on(fillLogoutAction, fillLogout),
+  on(fillErrorsAction, fillErrors)
 );
 
-export function authReducer(state: Auth | undefined, action: IAction): Auth {
+export function authReducer(state: IAuth | undefined, action: IAction): IAuth {
   return authReducerBuilder(state, action);
 }

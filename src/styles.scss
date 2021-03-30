@@ -3,3 +3,69 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.font-45-bold {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+}
+
+.font-22-bold {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.font-16-bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-14-bold {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.font-14 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.font-12 {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.color-black {
+  color: #000;
+}
+
+.color-orange {
+  color: #fb6d3a;
+}

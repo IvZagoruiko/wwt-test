@@ -9,7 +9,6 @@ import {AuthEffects} from './effects';
 @NgModule({
   declarations: [],
   imports: [
-    // ToDo : Denis answer 3
     StoreModule.forRoot({
       auth: authReducer
     }),

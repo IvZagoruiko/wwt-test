@@ -1,5 +1,5 @@
-import {Auth} from '../../enums';
+import {IAuth} from '../../interfaces';
 
 export interface IRootState {
-  auth: Auth;
+  auth: IAuth;
 }
